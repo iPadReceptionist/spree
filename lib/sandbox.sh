@@ -58,9 +58,11 @@ group :test, :development do
   gem 'bullet'
   gem 'pry-byebug'
   gem 'rack-mini-profiler'
+  gem 'awesome_print'
 end
 RUBY
 
+sed -i '' "/^gem.*sqlite3/ s/$/, '~> 1.3.6'/" Gemfile 
 bundle install --gemfile Gemfile
 bundle exec rails db:drop || true
 bundle exec rails db:create

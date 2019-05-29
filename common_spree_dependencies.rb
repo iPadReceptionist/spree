@@ -4,7 +4,7 @@
 source 'https://rubygems.org'
 
 gem 'sass-rails'
-gem 'sqlite3', platforms: [:ruby, :mingw, :mswin, :x64_mingw]
+gem 'sqlite3', '~> 1.3.6', platforms: [:ruby, :mingw, :mswin, :x64_mingw]
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 platforms :jruby do
@@ -15,6 +15,10 @@ end
 platforms :ruby do
   gem 'mysql2'
   gem 'pg', '~> 0.18'
+end
+
+group :development do
+  gem 'webdrivers', '~> 3.8.0'
 end
 
 group :test do
@@ -32,8 +36,6 @@ group :test do
   gem 'jsonapi-rspec'
   gem 'simplecov'
   gem 'webmock', '~> 3.0.1'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
   gem 'timecop'
   gem 'rails-controller-testing'
 end
