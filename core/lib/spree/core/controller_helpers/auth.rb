@@ -9,15 +9,15 @@ module Spree
           before_action :set_token
           helper_method :try_spree_current_user
 
-          rescue_from CanCan::AccessDenied do |_exception|
-            redirect_unauthorized_access
-          end
+          # rescue_from CanCan::AccessDenied do |_exception|
+          #   redirect_unauthorized_access
+          # end
         end
 
         # Needs to be overriden so that we use Spree's Ability rather than anyone else's.
-        def current_ability
-          @current_ability ||= Spree::Dependencies.ability_class.constantize.new(try_spree_current_user)
-        end
+        # def current_ability
+        #   @current_ability ||= Spree::Dependencies.ability_class.constantize.new(try_spree_current_user)
+        # end
 
         def redirect_back_or_default(default)
           redirect_to(session['spree_user_return_to'] || request.env['HTTP_REFERER'] || default)
