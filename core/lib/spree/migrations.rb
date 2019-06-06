@@ -30,7 +30,8 @@ module Spree
           name
         end.compact
 
-        missing_migrations = engine_migrations.sort - engine_in_app.sort
+        # missing_migrations = engine_migrations.sort - engine_in_app.sort
+        missing_migrations = []
         unless missing_migrations.empty?
           puts "[#{engine_name.capitalize} WARNING] Missing migrations."
           missing_migrations.each do |migration|
