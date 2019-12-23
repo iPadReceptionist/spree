@@ -1,4 +1,4 @@
-require 'cancan'
+# require 'cancan'
 require_dependency 'spree/core/controller_helpers/strong_parameters'
 
 class Spree::BaseController < ApplicationController

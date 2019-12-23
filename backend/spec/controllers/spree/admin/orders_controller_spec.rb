@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'cancan'
+# require 'cancan'
 require 'spree/testing_support/bar_ability'
 
 # Ability to test access to specific model instances
