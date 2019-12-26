@@ -126,7 +126,7 @@ module Spree
       end
 
       initializer 'spree.core.checking_migrations' do
-        Migrations.new(config, engine_name).check
+        # Migrations.new(config, engine_name).check
       end
 
       config.to_prepare do
