@@ -3,8 +3,8 @@
 #
 # See http://github.com/ryanb/cancan for more details on cancan.
 # require 'cancan'
-# module Spree
-#   class Ability
+module Spree
+  class Ability
 #     include CanCan::Ability
 #
 #     class_attribute :abilities
@@ -77,5 +77,5 @@
 #     def abilities_to_register
 #       []
 #     end
-#   end
-# end
+  end
+end
